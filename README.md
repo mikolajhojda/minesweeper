@@ -4,3 +4,8 @@ Minesweeper is a single-player puzzle video game. The objective of the game is t
 
 I created text version in Julia console. You can play in two game types: 8x8 grid and 16x16 grid. Have fun!
 
+![alt text](https://github.com/mikolajhojda/minesweeper/blob/master/scr/Adnotacja%202020-01-19%20203923.png)
+
+![alt text](https://github.com/mikolajhojda/minesweeper/blob/master/scr/Adnotacja%202020-01-19%20204020.png)
+
+![alt text](https://github.com/mikolajhojda/minesweeper/blob/master/scr/Adnotacja%202020-01-19%20204122.png)
