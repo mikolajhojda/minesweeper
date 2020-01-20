@@ -45,232 +45,38 @@ function Turn()
             global game_over = true
             println("Lose")
             
-            elseif(minesArray[cellx,celly]==0 && cellx!=1 && cellx!=8 && celly!=1 && celly!=8)
+            elseif(minesArray[cellx,celly]==0)
                 neighbor = 0
                 
-                if(minesArray[cellx-1, celly-1]==1)
+                if(cellx!=1 && celly!=1 && minesArray[cellx-1, celly-1]==1)
                     neighbor = neighbor+1
                 end
             
-                if(minesArray[cellx-1, celly]==1)
+                if(cellx!=1 && minesArray[cellx-1, celly]==1)
                     neighbor = neighbor+1
                 end
             
-                if(minesArray[cellx-1, celly+1]==1)
+                if(cellx!=1 && celly!=8 && minesArray[cellx-1, celly+1]==1)
                     neighbor = neighbor+1
                 end
             
-                if(minesArray[cellx, celly-1]==1)
+                if(celly!=1 && minesArray[cellx, celly-1]==1)
                     neighbor = neighbor+1
                 end
             
-                if(minesArray[cellx, celly+1]==1)
+                if(celly!=8 && minesArray[cellx, celly+1]==1 )
                     neighbor = neighbor+1
                 end
             
-                if(minesArray[cellx+1, celly-1]==1)
+                if(cellx!=8 && celly!=1 && minesArray[cellx+1, celly-1]==1)
                     neighbor = neighbor+1
                 end
             
-                if(minesArray[cellx+1, celly]==1)
+                if(cellx!=8 && minesArray[cellx+1, celly]==1)
                     neighbor = neighbor+1
                 end
             
-                if(minesArray[cellx+1, celly+1]==1)
-                    neighbor = neighbor+1
-                end
-            
-                board[cellx, celly] = string(neighbor)
-            
-            elseif(minesArray[cellx,celly]==0 && cellx==1 && celly!=1 && celly!=8)
-                neighbor = 0
-            
-                if(minesArray[cellx, celly-1]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx, celly+1]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx+1, celly-1]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx+1, celly]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx+1, celly+1]==1)
-                    neighbor = neighbor+1
-                end
-            
-                board[cellx, celly] = string(neighbor)
-            
-            elseif(minesArray[cellx,celly]==0 && cellx==8 && celly!=1 && celly!=8)
-                neighbor = 0
-            
-                if(minesArray[cellx, celly-1]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx, celly+1]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx-1, celly-1]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx-1, celly]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx-1, celly+1]==1)
-                    neighbor = neighbor+1
-                end
-            
-                board[cellx, celly] = string(neighbor)
-            
-            elseif(minesArray[cellx,celly]==0 && celly==1 && cellx!=1 && cellx!=8)
-                neighbor = 0
-            
-                if(minesArray[cellx-1, celly]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx-1, celly]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx-1, celly+1]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx, celly]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx, celly+1]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx+1, celly]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx+1, celly]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx+1, celly+1]==1)
-                    neighbor = neighbor+1
-                end
-            
-            
-                board[cellx, celly] = string(neighbor)
-            
-            elseif(minesArray[cellx,celly]==0 && celly==8 && cellx!=8 && cellx!=1)
-                neighbor = 0
-            
-                if(minesArray[cellx-1, celly]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx-1, celly]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx-1, celly-1]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx, celly]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx, celly-1]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx+1, celly]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx+1, celly]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx+1, celly-1]==1)
-                    neighbor = neighbor+1
-                end
-            
-            
-                board[cellx, celly] = string(neighbor)
-            
-            elseif(minesArray[cellx,celly]==0 && cellx==1 && celly==1)
-                neighbor = 0
-            
-                if(minesArray[cellx+1, celly+1]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx+1, celly]==1)
-                    neighbor = neighbor+1
-                end
-                
-                if(minesArray[cellx, celly+1]==1)
-                    neighbor = neighbor+1
-                end
-            
-                board[cellx, celly] = string(neighbor)
-            
-            elseif(minesArray[cellx,celly]==0 && cellx==8 && celly==1)
-                neighbor = 0
-            
-                if(minesArray[cellx-1, celly+1]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx-1, celly]==1)
-                    neighbor = neighbor+1
-                end
-                
-                if(minesArray[cellx, celly+1]==1)
-                    neighbor = neighbor+1
-                end
-            
-                board[cellx, celly] = string(neighbor)
-            
-            elseif(minesArray[cellx,celly]==0 && cellx==1 && celly==8)
-                neighbor = 0
-            
-                 if(minesArray[cellx+1, celly-1]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx+1, celly]==1)
-                    neighbor = neighbor+1
-                end
-                
-                if(minesArray[cellx, celly-1]==1)
-                    neighbor = neighbor+1
-                end
-            
-                board[cellx, celly] = string(neighbor)
-            
-            elseif(minesArray[cellx,celly]==0 && cellx==8 && celly==8)
-                neighbor = 0
-            
-                 if(minesArray[cellx-1, celly-1]==1)
-                    neighbor = neighbor+1
-                end
-            
-                if(minesArray[cellx-1, celly]==1)
-                    neighbor = neighbor+1
-                end
-                
-                if(minesArray[cellx, celly-1]==1)
+                if(cellx!=8 && celly!=8 && minesArray[cellx+1, celly+1]==1)
                     neighbor = neighbor+1
                 end
             
