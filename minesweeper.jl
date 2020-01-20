@@ -326,7 +326,8 @@ for i=1:field
         end
     end
 end
-
+println("\n")
+DisplayGrid()
 
 
 
