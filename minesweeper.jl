@@ -319,6 +319,14 @@ while(game_over == false)
     end
 end
 DisplayGrid()
+for i=1:field
+    for j=1:field
+        if(minesArray[i,j]==1)
+            board[i,j]=="M"
+        end
+    end
+end
+
 
 
 
