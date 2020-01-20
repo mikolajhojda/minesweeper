@@ -9,3 +9,5 @@ I created text version in Julia console. You can play in two game types: 8x8 gri
 ![alt text](https://github.com/mikolajhojda/minesweeper/blob/master/scr/Adnotacja%202020-01-19%20204020.png)
 
 ![alt text](https://github.com/mikolajhojda/minesweeper/blob/master/scr/Adnotacja%202020-01-19%20204122.png)
+
+![alt text](https://github.com/mikolajhojda/minesweeper/blob/master/scr/Adnotacja%202020-01-20%20172832.png)
